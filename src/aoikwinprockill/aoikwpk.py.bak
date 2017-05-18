@@ -128,7 +128,7 @@ def kill_proc(pattern, time_diff_min, force=False, print_only=False):
     for kill_pi in kill_pi_s:
         proc_txt_s.append('%s: %s' % (kill_pi.ProcessId, kill_pi.Commandline))
     
-    print(('\n'.join(proc_txt_s)))
+    print('\n'.join(proc_txt_s))
         
     #/ 6m1ybe0
     if print_only:
@@ -150,7 +150,7 @@ def kill_proc(pattern, time_diff_min, force=False, print_only=False):
         cmd_part_s.append(str(kill_pi.ProcessId))
     
     #/ 9ojOdU9
-    print(('\n#/ Run taskkill\n%s' % (' '.join(cmd_part_s),)))
+    print('\n#/ Run taskkill\n%s' % (' '.join(cmd_part_s),))
     
     proc_obj = subprocess.Popen(cmd_part_s, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     
@@ -206,7 +206,7 @@ def main():
         )
     except Exception:
         print('Error:')
-        print(('---\n{}---'.format(get_traceback_txt())))
+        print('---\n{}---'.format(get_traceback_txt()))
 
 if __name__ == '__main__':
     #/ 3o4XKU0
